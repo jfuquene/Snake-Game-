@@ -10,3 +10,7 @@ html, body {
     height: 200px;
     border: solid 2px black;
 }
+.square {
+    width: 20px;
+    height: 20px;
+}
