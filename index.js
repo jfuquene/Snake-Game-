@@ -9,6 +9,10 @@ const width = 10
 let appleIndex = 0
 let score = 0
 
+let intervalTime = 1000
+let speed = 0.9
+let timerId = 0
+
 function createGrid() {
     //create 100 of these elements with a for loop
     for (let i=0; i < width*width; i++) {
