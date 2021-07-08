@@ -45,3 +45,29 @@ function move() {
     squares[tail].classList.remove('snake')
     //add square in direction we are heading
     currentSnake.unshift(currentSnake[0] + direction)
+    //add styling so we can see it
+    
+    //deal with snake head gets apple
+    if (squares[currentSnake[0]].classList.contains('apple')) {
+        //remove the class of apple
+        squares[currentSnake[0]].classList.remove('apple')
+        //grow our snake by adding class of snake to it
+        squares[tail].classList.add('snake')
+        console.log(tail)
+        //grow our snake array
+        currentSnake.push(tail)
+        console.log(currentSnake)
+        //generate new apple
+        generateApple()
+        //add one to the score
+        score++
+        //display our score
+        scoreDisplay.textContent = score
+        //speed up our snake
+        clearInterval(timerId)
+        console.log(intervalTime)
+        intervalTime = intervalTime * speed
+        console.log(intervalTime)
+        timerId = setInterval(move, intervalTime)
+    }
+    
