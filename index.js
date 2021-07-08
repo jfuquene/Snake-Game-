@@ -70,4 +70,6 @@ function move() {
         console.log(intervalTime)
         timerId = setInterval(move, intervalTime)
     }
+    squares[currentSnake[0]].classList.add('snake')
+}
     
